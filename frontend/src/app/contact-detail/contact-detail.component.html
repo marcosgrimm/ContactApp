@@ -1,0 +1,26 @@
+<div *ngIf="contact">
+
+  <h2>{{ contact.subject | uppercase }}</h2>
+  <div><span>id: </span>{{contact.id}}</div>
+  <div>
+    <label>From:
+      <input [(ngModel)]="contact.from" placeholder="from"/>
+    </label>
+  </div>
+  <div>
+    <label>To:
+      <input [(ngModel)]="contact.to" placeholder="to"/>
+    </label>
+  </div>
+  <div>
+    <label>Subject:
+      <input [(ngModel)]="contact.subject" placeholder="subject"/>
+    </label>
+  </div>
+  <div>
+    <label>Message:
+      <input [(ngModel)]="contact.message" placeholder="message"/>
+    </label>
+  </div>
+
+</div>
