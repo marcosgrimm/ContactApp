@@ -1,3 +1,8 @@
-<p>
-  dashboard works!
-</p>
+<h3>Top Contacts</h3>
+<div class="grid grid-pad">
+  <a *ngFor="let contact of contacts" class="col-1-4" routerLink="/contact/detail/{{contact.id}}">
+    <div class="module contact">
+      <h4>{{contact.from}}</h4>
+    </div>
+  </a>
+</div>

@@ -14,4 +14,15 @@ export class ContactService {
     this.messageService.add('ContactService: fetched contacts')
     return of(CONTACTS);
   }
+
+  getContact2(id: number) Observable<Contact> {
+        this.messageService.add(`ContactService: fetched contact id=${id}`);
+        return of(CONTACTS.find(contact => contact.id === id));
+  }
+
+    getContact(id: number): Observable<Contact> {
+        // TODO: send the message _after_ fetching the hero
+        this.messageService.add(`ContactService: fetched contact id=${id}`);
+        return of(CONTACTS.find(contact => contact.id === id));
+    }
 }
