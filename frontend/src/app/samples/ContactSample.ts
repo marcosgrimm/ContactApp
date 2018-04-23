@@ -1,5 +1,5 @@
 import {Contact} from "../models/Contact";
-import {TO} from "../contact/constants";
+import {TO} from "../components/contact/constants";
 
 export const CONTACTS : Contact[] = [
     {id:4,to:TO,from:'a',subject:'Product X',message:''},

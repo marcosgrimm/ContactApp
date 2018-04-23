@@ -6,10 +6,14 @@ import { AppComponent } from './app.component';
 
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 import {MatButtonModule, MatCheckboxModule} from "@angular/material";
-import { ContactComponent } from './contact/contact.component';
-import { ContactDetailComponent } from './contact-detail/contact-detail.component';
+import { ContactComponent } from './components/contact/contact.component';
+import { ContactDetailComponent } from './components/contact-detail/contact-detail.component';
 import {ContactService} from "./services/contact.service";
-import { MessagesComponent } from './messages/messages.component';
+import { MessagesComponent } from './components/messages/messages.component';
+import { MessageService } from './services/message.service';
+import { AppRoutingModule } from './/app-routing.module';
+import { DashboardComponent } from './components/dashboard/dashboard.component';
+import { ThingComponent } from './thing/thing.component';
 
 
 @NgModule({
@@ -17,16 +21,19 @@ import { MessagesComponent } from './messages/messages.component';
     AppComponent,
     ContactComponent,
     ContactDetailComponent,
-    MessagesComponent
+    MessagesComponent,
+    DashboardComponent,
+    ThingComponent
   ],
   imports: [
       BrowserModule,
       FormsModule,
       BrowserAnimationsModule,
       MatButtonModule,
-      MatCheckboxModule
+      MatCheckboxModule,
+      AppRoutingModule
   ],
-  providers: [ContactService],
+  providers: [ContactService, MessageService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
