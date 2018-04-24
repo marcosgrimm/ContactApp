@@ -3,7 +3,7 @@
     <div class="card" *ngFor="let profile of profiles" routerLink="/profile/detail/{{profile.id}}">
         <div class="card-body">
             <h5 class="card-title">{{profile.title}}</h5>
-            <p class="card-text">{{profile.summary}}</p>
+            <p class="card-text">{{profile.summary.slice(0,100)}}... <a routerLink="/profile/detail/{{profile.id}}">More</a></p>
         </div>
         <ul class="list-group list-group-flush">
             <li class="list-group-item">Cras justo odio</li>
