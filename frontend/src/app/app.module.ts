@@ -5,15 +5,22 @@ import { FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
-import {MatButtonModule, MatCheckboxModule} from "@angular/material";
+import {
+    MatButtonModule,
+    MatCheckboxModule,
+    MatIcon,
+    MatIconModule,
+    MatMenuModule,
+    MatSidenavModule
+} from "@angular/material";
 import { ContactComponent } from './components/contact/contact.component';
 import { ContactDetailComponent } from './components/contact-detail/contact-detail.component';
 import {ContactService} from "./services/contact.service";
 import { MessagesComponent } from './components/messages/messages.component';
 import { MessageService } from './services/message.service';
-import { AppRoutingModule } from './/app-routing.module';
+import { AppRoutingModule } from './app-routing.module';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
-import {ThingComponent} from "./components/thing/thing.component";
+import {HttpClientModule} from "@angular/common/http";
 
 
 @NgModule({
@@ -22,16 +29,14 @@ import {ThingComponent} from "./components/thing/thing.component";
     ContactComponent,
     ContactDetailComponent,
     MessagesComponent,
-    DashboardComponent,
-    ThingComponent
+    DashboardComponent
   ],
   imports: [
       BrowserModule,
       FormsModule,
       BrowserAnimationsModule,
-      MatButtonModule,
-      MatCheckboxModule,
-      AppRoutingModule
+      AppRoutingModule,
+      HttpClientModule
   ],
   providers: [ContactService, MessageService],
   bootstrap: [AppComponent]
