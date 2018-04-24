@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import {Contact} from "../../models/Contact";
-import {ContactService} from "../../services/contact.service";
+import {Profile} from "../../models/Profile";
+import {ProfileService} from "../../services/profile.service";
 
 @Component({
     selector: 'app-dashboard',
@@ -8,16 +8,16 @@ import {ContactService} from "../../services/contact.service";
     styleUrls: [ './dashboard.component.css' ]
 })
 export class DashboardComponent implements OnInit {
-    contacts: Contact[] = [];
+    profiles: Profile[] = [];
 
-    constructor(private contactService: ContactService) { }
+    constructor(private profileService: ProfileService) { }
 
     ngOnInit() {
-        this.getContacts();
+        this.getProfiles();
     }
 
-    getContacts(): void {
-        this.contactService.getContacts()
-            .subscribe(contacts => this.contacts= contacts.slice(1, 5));
+    getProfiles(): void {
+        this.profileService.getProfiles()
+            .subscribe(profiles => this.profiles= profiles.slice(1, 5));
     }
 }

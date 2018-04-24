@@ -1,11 +1,15 @@
-<h3 class="text-center">Top Profiles</h3>
+<h3 class="text-center">Top Skilled Profiles</h3>
 <div class="card-deck">
-    <div class="card" *ngFor="let contact of contacts" routerLink="/contact/detail/{{contact.id}}">
+    <div class="card" *ngFor="let profile of profiles" routerLink="/profile/detail/{{profile.id}}">
         <div class="card-body">
-            <h5 class="card-title">{{contact.subject}}</h5>
-            <p class="card-text">This is a longer card with supporting text
-                below as a natural lead-in to additional content. This content is a little bit longer.</p>
+            <h5 class="card-title">{{profile.title}}</h5>
+            <p class="card-text">{{profile.summary}}</p>
         </div>
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item">Cras justo odio</li>
+            <li class="list-group-item">Dapibus ac facilisis in</li>
+            <li class="list-group-item">Vestibulum at eros</li>
+        </ul>
         <div class="card-footer">
             <small class="text-muted">Last updated 3 mins ago</small>
         </div>
