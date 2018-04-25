@@ -9,7 +9,8 @@ import {ProfileService} from "../../services/profile.service";
 })
 export class DashboardComponent implements OnInit {
     profiles: Profile[] = [];
-
+    profilesShown:Profile[] = [];
+    profile: Profile;
     constructor(private profileService: ProfileService) { }
 
     ngOnInit() {
@@ -18,6 +19,23 @@ export class DashboardComponent implements OnInit {
 
     getProfiles(): void {
         this.profileService.getProfiles()
-            .subscribe(profiles => this.profiles= profiles.slice(1, 5));
+            .subscribe(profiles =>
+                this.profiles= profiles
+            );
+        this.updateProfilesShown()
     }
+
+    removeCard(index){
+        this.profiles.splice(index,1);
+        this.updateProfilesShown();
+    }
+
+    updateProfilesShown(){
+        if (this.profiles.length = 4){
+            this.profiles.push(this.profile);
+        }
+        this.profilesShown = this.profiles.slice(0,4);
+    }
+
+
 }

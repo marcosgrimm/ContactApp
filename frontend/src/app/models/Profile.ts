@@ -5,7 +5,11 @@ export class Profile {
     email:string;
     summary:string;
     skills:[
-        {name:string,experience:string}
+        {
+            name:string,
+            experience:string,
+            main:boolean
+        }
     ]
 
 }

@@ -1,18 +1,45 @@
+<div class="jumbotron">
+    <div class="container">
+        <h1 class="display-4">Find your next hire</h1>
+        <p class="lead">Who do I want to work with? You are one click away to find it.</p>
+    </div>
+</div>
+
 <h3 class="text-center">Top Skilled Profiles</h3>
+
 <div class="card-deck">
-    <div class="card" *ngFor="let profile of profiles" routerLink="/profile/detail/{{profile.id}}">
-        <div class="card-body">
-            <h5 class="card-title">{{profile.title}}</h5>
-            <p class="card-text">{{profile.summary.slice(0,100)}}... <a routerLink="/profile/detail/{{profile.id}}">More</a></p>
-        </div>
-        <ul class="list-group list-group-flush">
-            <li class="list-group-item">Cras justo odio</li>
-            <li class="list-group-item">Dapibus ac facilisis in</li>
-            <li class="list-group-item">Vestibulum at eros</li>
-        </ul>
-        <div class="card-footer">
-            <small class="text-muted">Last updated 3 mins ago</small>
-        </div>
+    <div class="card" *ngFor="let profile of profilesShown; let i = index">
+
+        <span *ngIf="profile; else noProfile">
+            <div class="card-body">
+                <h5 class="card-title">{{profile.title}}
+                    <span class="float-right" *ngIf="profile.id">
+                        <button type="button" class="close" aria-label="Close" (click)="removeCard(i)">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </span>
+                </h5>
+                <p class="card-text">{{profile.summary.slice(0,100)}}... <a routerLink="/profile/detail/{{profile.id}}">More</a></p>
+            </div>
+            <ul class="list-group list-group-flush">
+                <span *ngFor="let skill of profile.skills">
+                    <span *ngIf="skill.main">
+                        <li class="list-group-item"><label>Main Skill:</label> {{skill.name}}</li>
+                        <li class="list-group-item"><label>Experience:</label> {{skill.experience}}</li>
+                    </span>
+                </span>
+            </ul>
+            <div class="card-footer">
+                <small class="text-muted">Last updated 3 mins ago</small>
+            </div>
+        </span>
+        <ng-template #noProfile>
+            <div class="card-body">
+                <h5 class="card-title"> Who's next?
+                </h5>
+                <p class="card-text"></p>
+            </div>
+        </ng-template>
     </div>
 </div>
 
