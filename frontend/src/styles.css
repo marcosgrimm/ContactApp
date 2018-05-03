@@ -1,2 +1,77 @@
-/* You can add global styles to this file, and also import other style files */
+/* You can add global styles to this file, and also import other style nav files */
 @import '~bootstrap/dist/css/bootstrap.min.css';
+
+nav .form-control:focus {
+    color: #1E3231;
+    background-color: #fff;
+    border-color: #fff;
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem rgba(255, 255, 255, .25);
+}
+
+
+.bronze{ color: #cd7f32; }
+.silver{ color: #c0c0c0;}
+.gold{color: #ffd700;}
+
+
+.yellow-bg{
+    background-color: #1E3231;
+}
+
+.light-yellow-bg{
+    background-color: #1E3231;
+}
+
+.yellow-text{
+    color:#1E3231;
+}
+
+
+
+.purple-bg{
+    background-color: #1E3231;
+}
+
+.purple-text{
+    color:#1E3231;
+}
+
+.light-purple-text{
+    color:#afa5c5;
+}
+
+.btn-outline-gray {
+    color: #5F4B8B;
+    background-color: transparent;
+    background-image: none;
+    border-color: #5F4B8B;
+}
+
+.btn-outline-gray:hover {
+    color: #fff;
+    background-color: #5F4B8B;
+    border-color: #5F4B8B;
+}
+
+.btn-outline-gray:focus, .btn-outline-gray.focus {
+    box-shadow: 0 0 0 0.2rem rgba(143, 129, 173, 0.5);
+}
+
+.btn-outline-gray.disabled, .btn-outline-gray:disabled {
+    color: #5F4B8B;
+    background-color: transparent;
+}
+
+.btn-outline-gray:not(:disabled):not(.disabled):active, .btn-outline-gray:not(:disabled):not(.disabled).active,
+.show > .btn-outline-gray.dropdown-toggle {
+    color: #fff;
+    background-color: #5F4B8B;
+    border-color: #5F4B8B;
+}
+
+.btn-outline-gray:not(:disabled):not(.disabled):active:focus, .btn-outline-gray:not(:disabled):not(.disabled).active:focus,
+.show > .btn-outline-gray.dropdown-toggle:focus {
+    box-shadow: 0 0 0 0.2rem rgba(143, 129, 173, 0.5);
+
+}

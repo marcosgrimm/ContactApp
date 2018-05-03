@@ -8,7 +8,7 @@
     <title>{{title}}</title>
 </head>
 <body>
-<nav class="navbar navbar-light bg-light navbar-expand-sm">
+<nav class="navbar navbar-dark navbar-expand-sm yellow-bg">
     <a class="navbar-brand" href="#">{{title}}</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -17,7 +17,10 @@
     <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
         <ul class="navbar-nav mr-auto">
             <li class="nav-item">
-                <a  class="nav-link" routerLink="/dashboard">Dashboard</a>
+                <a  class="nav-link" routerLink="/dashboard">Home</a>
+            </li>
+            <li class="nav-item">
+                <a  class="nav-link" routerLink="/profile">Send your Profile</a>
             </li>
             <li class="nav-item">
                 <a  class="nav-link" routerLink="/contact">Contact</a>
@@ -25,13 +28,13 @@
         </ul>
         <form class="form-inline my-3 my-lg-0">
             <input class="form-control mr-sm-3" type="search" placeholder="PHP, Ruby, Angular..." aria-label="Java, PHP, Ruby, Angular, React ...">
-            <button class="btn btn-outline-success my-3 my-sm-0" type="submit">Search Main Skill</button>
+            <button class="btn btn-outline-light my-3 my-sm-0" type="submit">Search Main Skill</button>
         </form>
     </div>
 </nav>
 <br>
 <!-- Navbar content -->
-<div class="container">
+<div class="container purple-text">
     <router-outlet></router-outlet>
 
     <footer class="pt-4 my-md-5 pt-md-5 border-top">

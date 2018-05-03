@@ -7,8 +7,7 @@ export class Profile {
     skills:[
         {
             name:string,
-            experience:string,
-            main:boolean
+            experience:number
         }
     ]
 

@@ -171,6 +171,34 @@
   dependencies:
     tslib "^1.7.1"
 
+"@fortawesome/fontawesome-common-types@^0.1.5":
+  version "0.1.5"
+  resolved "https://registry.yarnpkg.com/@fortawesome/fontawesome-common-types/-/fontawesome-common-types-0.1.5.tgz#d44485071f94ffac7f66ff6117b290eb7c908d58"
+
+"@fortawesome/fontawesome-free-brands@^5.0.11":
+  version "5.0.11"
+  resolved "https://registry.yarnpkg.com/@fortawesome/fontawesome-free-brands/-/fontawesome-free-brands-5.0.11.tgz#1e2eda34f2c6208facabe44a90a49972b37307e9"
+  dependencies:
+    "@fortawesome/fontawesome-common-types" "^0.1.5"
+
+"@fortawesome/fontawesome-free-regular@^5.0.11":
+  version "5.0.11"
+  resolved "https://registry.yarnpkg.com/@fortawesome/fontawesome-free-regular/-/fontawesome-free-regular-5.0.11.tgz#6dc3899c5d29d09ae3f59010d17c72fa1292a997"
+  dependencies:
+    "@fortawesome/fontawesome-common-types" "^0.1.5"
+
+"@fortawesome/fontawesome-free-solid@^5.0.11":
+  version "5.0.11"
+  resolved "https://registry.yarnpkg.com/@fortawesome/fontawesome-free-solid/-/fontawesome-free-solid-5.0.11.tgz#e6959def67f073b32c6ff419da0c99795f130248"
+  dependencies:
+    "@fortawesome/fontawesome-common-types" "^0.1.5"
+
+"@fortawesome/fontawesome@^1.1.6":
+  version "1.1.6"
+  resolved "https://registry.yarnpkg.com/@fortawesome/fontawesome/-/fontawesome-1.1.6.tgz#edee6108aa3485c6f0fb3a16e6a222086b2abb42"
+  dependencies:
+    "@fortawesome/fontawesome-common-types" "^0.1.5"
+
 "@ng-bootstrap/ng-bootstrap@^1.1.2":
   version "1.1.2"
   resolved "https://registry.yarnpkg.com/@ng-bootstrap/ng-bootstrap/-/ng-bootstrap-1.1.2.tgz#276b1c488687ca3e53d1694b63835fd57ca552ca"

@@ -34,7 +34,7 @@ export class DashboardComponent implements OnInit {
         if (this.profiles.length = 4){
             this.profiles.push(this.profile);
         }
-        this.profilesShown = this.profiles.slice(0,4);
+        this.profilesShown = this.profiles.slice(0,3);
     }
 
 

@@ -7,7 +7,7 @@ export const PROFILES : Profile[] = [
         name:'Jason Bourne',
         summary: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam luctus pellentesque sollicitudin. Duis vestibulum dapibus aliquet. Nulla ac eleifend justo, vel blandit nisl. Nullam elementum hendrerit massa, sit amet bibendum leo sollicitudin vitae. Nam quis lobortis elit. Nam pretium eu tellus sit amet eleifend. Maecenas cursus lacinia nunc, et consequat metus aliquet sed. Donec rutrum eu ipsum eget scelerisque. Curabitur ex ipsum, tincidunt eu mauris et, vestibulum pretium lacus.',
         title:'Web Developer 1',
-        skills:[{name:'PHP',experience:'Junior',main:true}]
+        skills:[{name:'PHP',experience:1}]
     },
     {
         id:5,
@@ -15,7 +15,7 @@ export const PROFILES : Profile[] = [
         name:'Jason Bourne',
         summary: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam luctus pellentesque sollicitudin. Duis vestibulum dapibus aliquet. Nulla ac eleifend justo, vel blandit nisl. Nullam elementum hendrerit massa, sit amet bibendum leo sollicitudin vitae. Nam quis lobortis elit. Nam pretium eu tellus sit amet eleifend. Maecenas cursus lacinia nunc, et consequat metus aliquet sed. Donec rutrum eu ipsum eget scelerisque. Curabitur ex ipsum, tincidunt eu mauris et, vestibulum pretium lacus.',
         title:'Web Developer 2',
-        skills:[{name:'Ruby',experience:'Intermediate',main:true}]
+        skills:[{name:'Ruby',experience:3}]
     },
     {
         id:5,
@@ -23,7 +23,7 @@ export const PROFILES : Profile[] = [
         name:'Jason Bourne',
         summary: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam luctus pellentesque sollicitudin. Duis vestibulum dapibus aliquet. Nulla ac eleifend justo, vel blandit nisl. Nullam elementum hendrerit massa, sit amet bibendum leo sollicitudin vitae. Nam quis lobortis elit. Nam pretium eu tellus sit amet eleifend. Maecenas cursus lacinia nunc, et consequat metus aliquet sed. Donec rutrum eu ipsum eget scelerisque. Curabitur ex ipsum, tincidunt eu mauris et, vestibulum pretium lacus.',
         title:'Data Analyst 3',
-        skills:[{name:'Scala',experience:'Senior',main:true}]
+        skills:[{name:'Scala',experience:5}]
     },
     {
         id:7,
@@ -31,7 +31,7 @@ export const PROFILES : Profile[] = [
         name:'Jason Bourne',
         summary: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam luctus pellentesque sollicitudin. Duis vestibulum dapibus aliquet. Nulla ac eleifend justo, vel blandit nisl. Nullam elementum hendrerit massa, sit amet bibendum leo sollicitudin vitae. Nam quis lobortis elit. Nam pretium eu tellus sit amet eleifend. Maecenas cursus lacinia nunc, et consequat metus aliquet sed. Donec rutrum eu ipsum eget scelerisque. Curabitur ex ipsum, tincidunt eu mauris et, vestibulum pretium lacus.',
         title:'Web Developer 4',
-        skills:[{name:'PHP',experience:'Entry Level',main:true}]
+        skills:[{name:'PHP',experience:1}]
     },
     {
         id:8,
@@ -39,7 +39,7 @@ export const PROFILES : Profile[] = [
         name:'Jason Bourne',
         summary: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam luctus pellentesque sollicitudin. Duis vestibulum dapibus aliquet. Nulla ac eleifend justo, vel blandit nisl. Nullam elementum hendrerit massa, sit amet bibendum leo sollicitudin vitae. Nam quis lobortis elit. Nam pretium eu tellus sit amet eleifend. Maecenas cursus lacinia nunc, et consequat metus aliquet sed. Donec rutrum eu ipsum eget scelerisque. Curabitur ex ipsum, tincidunt eu mauris et, vestibulum pretium lacus.',
         title:'Web Developer 5',
-        skills:[{name:'C#',experience:'Junir',main:true}]
+        skills:[{name:'C#',experience:1}]
     },
 
 ];

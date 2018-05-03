@@ -14,7 +14,7 @@ const routes: Routes = [
     {path:'profile', component:ProfileComponent},
     {path:'contact/detail/:id', component:ContactDetailComponent},
     {path:'profile/detail/:id', component:ProfileDetailComponent}
-    ];
+];
 
 @NgModule({
     exports:[RouterModule],
