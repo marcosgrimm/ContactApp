@@ -9,7 +9,7 @@ import {FormGroup, FormBuilder, FormArray,Validators} from "@angular/forms";
 export class ProfileComponent implements OnInit {
 
     form: FormGroup;
-    skills: any = [];
+    skills: FormArray;
     constructor(private formBuilder: FormBuilder) {
     }
 
@@ -17,27 +17,53 @@ export class ProfileComponent implements OnInit {
         this.createForm();
     }
 
+    getForm(){
+        return this.form;
+    }
+
+    getControl(formControlName){
+        return this.getForm().get(formControlName);
+    }
+
+    getValue(formControlName){
+        return this.getControl(formControlName).value;
+    }
     createForm (){
         let emptyRequired = ['',Validators.required];
         this.form = this.formBuilder.group({
             email:emptyRequired,
             name:emptyRequired,
             title:emptyRequired,
-            summary:['',[Validators.maxLength(280),Validators.required]],
-            skills:this.formBuilder.array([this.createSkill()])
+            summary:['',[Validators.required]],
+            skills:this.formBuilder.array([]),
+            newSkill:this.formBuilder.group(
+                { name:emptyRequired,
+                    experience:emptyRequired})
         });
+
+        this.skills = this.getControl('skills') as FormArray;
+
     }
 
-    createSkill(): FormGroup {
+    createSkill(params:any): FormGroup {
         return this.formBuilder.group({
-            name: '',
-            experience: ''
+            name: params.name,
+            experience: params.experience
         });
     }
 
     addSkill(){
-        this.skills = this.form.get('skills') as FormArray;
-        this.skills.push(this.createSkill());
+        let name = this.getValue('newSkill.name');
+        let experience = this.getValue('newSkill.experience');
+
+        let params = {
+            name:name,
+            experience:experience
+        }
+        this.skills.push(this.createSkill(params));
+
+
+        this.getControl('newSkill').reset();
     }
 
     submit(){
