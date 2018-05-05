@@ -1,1 +1,0 @@
-export const TO : string = 'contact@bompitaco.com';
