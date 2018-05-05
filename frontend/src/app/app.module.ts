@@ -16,8 +16,9 @@ import { HttpClientModule } from "@angular/common/http";
 import { ProfileComponent } from "./components/profile/profile.component";
 import { ProfileDetailComponent } from "./components/profile-detail/profile-detail.component";
 import { ProfileService } from "./services/profile.service";
-import {faChevronLeft, faChevronRight, faStar} from '@fortawesome/fontawesome-free-solid';
-import fontawesome from '@fortawesome/fontawesome';
+import {faChevronLeft, faChevronRight, faStar,faQuestion} from '@fortawesome/fontawesome-free-solid';
+import * as solid from '@fortawesome/fontawesome-free-solid';
+import * as fontawesome from '@fortawesome/fontawesome';
 
 
 @NgModule({
@@ -45,6 +46,6 @@ import fontawesome from '@fortawesome/fontawesome';
 export class AppModule {
 
     constructor(){
-        fontawesome.library.add(faChevronLeft, faChevronRight,faStar);
+        fontawesome.library.add(faStar,faQuestion);
     }
 }

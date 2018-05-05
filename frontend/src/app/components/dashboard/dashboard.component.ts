@@ -11,6 +11,7 @@ export class DashboardComponent implements OnInit {
     profiles: Profile[] = [];
     profilesShown:Profile[] = [];
     profile: Profile;
+    qtyProfilesShown:number=3;
     constructor(private profileService: ProfileService) { }
 
     ngOnInit() {
@@ -31,10 +32,8 @@ export class DashboardComponent implements OnInit {
     }
 
     updateProfilesShown(){
-        if (this.profiles.length = 4){
-            this.profiles.push(this.profile);
-        }
-        this.profilesShown = this.profiles.slice(0,3);
+
+        this.profilesShown = this.profiles.slice(0,this.qtyProfilesShown);
     }
 
 

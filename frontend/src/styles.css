@@ -15,15 +15,15 @@ nav .form-control:focus {
 .gold{color: #ffd700;}
 
 
-.yellow-bg{
+.custom-bg{
     background-color: #1E3231;
 }
 
-.light-yellow-bg{
+.light-custom-bg{
     background-color: #1E3231;
 }
 
-.yellow-text{
+.custom-text{
     color:#1E3231;
 }
 
@@ -74,4 +74,40 @@ nav .form-control:focus {
 .show > .btn-outline-gray.dropdown-toggle:focus {
     box-shadow: 0 0 0 0.2rem rgba(143, 129, 173, 0.5);
 
+}
+
+
+.btn-outline-custom {
+    color: #1E3231;
+    background-color: transparent;
+    background-image: none;
+    border-color: #1E3231;
+}
+
+.btn-outline-custom:hover {
+    color: #fff;
+    background-color: #1E3231;
+    border-color: #1E3231;
+}
+
+
+.btn-outline-custom:focus, .btn-outline-custom.focus {
+    box-shadow: 0 0 0 0.2rem rgba(30, 50, 49, 0.5);
+}
+
+.btn-outline-custom.disabled, .btn-outline-custom:disabled {
+    color: #1E3231;
+    background-color: transparent;
+}
+
+.btn-outline-custom:not(:disabled):not(.disabled):active, .btn-outline-custom:not(:disabled):not(.disabled).active,
+.show > .btn-outline-custom.dropdown-toggle {
+    color: #fff;
+    background-color: #1E3231;
+    border-color: #1E3231;
+}
+
+.btn-outline-custom:not(:disabled):not(.disabled):active:focus, .btn-outline-custom:not(:disabled):not(.disabled).active:focus,
+.show > .btn-outline-custom.dropdown-toggle:focus {
+    box-shadow: 0 0 0 0.2rem rgba(30, 50, 49, 0.5);
 }
