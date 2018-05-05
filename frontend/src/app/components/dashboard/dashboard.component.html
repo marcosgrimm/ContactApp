@@ -7,10 +7,7 @@
 <h3 class="text-center purple-text">Top Skilled Profiles</h3>
 <br/>
 <div class="card-deck " >
-{{profilesShown.length}}
-
     <div class="card" *ngFor="let profile of profilesShown; let i = index">
-
         <span *ngIf="profile;">
             <div class="card-body">
                 <h5 class="card-title">{{profile.title}}
@@ -48,10 +45,7 @@
                 <button type="button" class="btn btn-outline-custom" aria-label="Invite Contacts">
                     Invite Contacts
                 </button>
-
             </p>
         </div>
     </div>
-
 </div>
-

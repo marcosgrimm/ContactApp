@@ -1,0 +1,51 @@
+<div class="jumbotron purple-text" style="background-color: transparent">
+    <div class="container">
+        <h1 class="display-4">Find your next hire</h1>
+        <p class="lead">Who do You want to work with? Choose Now.</p>
+    </div>
+</div>
+<h3 class="text-center purple-text">Top Skilled Profiles</h3>
+<br/>
+<div class="card-deck " >
+    <div class="card" *ngFor="let profile of profilesShown; let i = index">
+        <span *ngIf="profile;">
+            <div class="card-body">
+                <h5 class="card-title">{{profile.title}}
+                    <span class="float-right" *ngIf="profilesShown.length>2">
+                        <button type="button" class="close" aria-label="Close" (click)="removeCard(i)">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </span>
+                </h5>
+                <p class="card-text">{{profile.summary.slice(0,100)}}... <a routerLink="/profile/detail/{{profile.id}}" class="font-weight-bold purple-text">More</a></p>
+            </div>
+            <ul class="list-group list-group-flush">
+                <span *ngFor="let skill of profile.skills">
+                        <li class="list-group-item"><label></label>
+                            {{skill.name}}
+                            <span *ngIf="skill.experience == 1" ><span class="fas fa-star bronze"></span></span>
+                            <span *ngIf="skill.experience == 3" ><span class="fas fa-star silver"></span></span>
+                            <span *ngIf="skill.experience == 5" ><span class="fas fa-star gold"></span></span>
+                        </li>
+                </span>
+            </ul>
+            <div class="card-footer ">
+                <small class="text-muted">Last updated 3 mins ago</small>
+            </div>
+        </span>
+    </div>
+    <div class="card" *ngFor="let number of ' '.repeat(qtyProfilesShown - profilesShown.length).split(''), let i = index">
+        <div class="card-body">
+            <h5 class="card-title text-center">
+                <span class="fas fa-question gold fa-2x"></span>
+            </h5>
+            <p class="card-text text-center ">
+                <strong>Unfortunately, there are no more profiles to show.</strong><br>
+                Invite your contacts and let them be found.<br><br>
+                <button type="button" class="btn btn-outline-custom" aria-label="Invite Contacts">
+                    Invite Contacts
+                </button>
+            </p>
+        </div>
+    </div>
+</div>
