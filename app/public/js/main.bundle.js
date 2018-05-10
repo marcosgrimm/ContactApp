@@ -37,8 +37,7 @@ var contact_detail_component_1 = __webpack_require__("./src/app/components/conta
 var profile_component_1 = __webpack_require__("./src/app/components/profile/profile.component.ts");
 var profile_detail_component_1 = __webpack_require__("./src/app/components/profile-detail/profile-detail.component.ts");
 var routes = [
-    { path: '', redirectTo: '/dashboard', pathMatch: 'full' },
-    { path: 'dashboard', component: dashboard_component_1.DashboardComponent },
+    { path: '', component: dashboard_component_1.DashboardComponent, pathMatch: 'full' },
     { path: 'contact', component: contact_component_1.ContactComponent },
     { path: 'profile', component: profile_component_1.ProfileComponent },
     { path: 'contact/detail/:id', component: contact_detail_component_1.ContactDetailComponent },
@@ -730,7 +729,7 @@ var ContactService = /** @class */ (function () {
         this.messageService = messageService;
     }
     ContactService.prototype.getContacts = function () {
-        this.messageService.add('ContactService: fetched contacts');
+        // this.messageService.add('ContactService: fetched contacts')
         return of_1.of(ContactSample_1.CONTACTS);
     };
     ContactService.prototype.getContact = function (id) {
@@ -804,13 +803,20 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
 var ProfileSample_1 = __webpack_require__("./src/app/samples/ProfileSample.ts");
 var of_1 = __webpack_require__("./node_modules/rxjs/_esm5/observable/of.js");
-var message_service_1 = __webpack_require__("./src/app/services/message.service.ts");
+var http_1 = __webpack_require__("./node_modules/@angular/common/esm5/http.js");
+var operators_1 = __webpack_require__("./node_modules/rxjs/_esm5/operators.js");
 var ProfileService = /** @class */ (function () {
-    function ProfileService(messageService) {
-        this.messageService = messageService;
+    function ProfileService(http) {
+        this.http = http;
+        this.profiles = [];
     }
+    // getProfiles() : Observable<Profile[]> {
     ProfileService.prototype.getProfiles = function () {
-        this.messageService.add('ProfileService: fetched profiles');
+        var profiles = this.http.get('/api/profiles').pipe(operators_1.map(function (response) {
+            // console.log(response);
+            //response.json();
+        })).subscribe();
+        // this.messageService.add('ProfileService: fetched profiles')
         return of_1.of(ProfileSample_1.PROFILES);
     };
     ProfileService.prototype.getProfile = function (id) {
@@ -820,7 +826,7 @@ var ProfileService = /** @class */ (function () {
     };
     ProfileService = __decorate([
         core_1.Injectable(),
-        __metadata("design:paramtypes", [message_service_1.MessageService])
+        __metadata("design:paramtypes", [http_1.HttpClient])
     ], ProfileService);
     return ProfileService;
 }());
